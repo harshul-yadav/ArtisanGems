@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ArtisanGems</title>
+    <meta name="description" content="View detailed information about our handcrafted products.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ArtisanGems</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="#" id="category-breadcrumb">Category</a></li>
+                <li id="product-breadcrumb">Product Name</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images" id="thumbnail-container">
+                        <!-- Thumbnail images will be added dynamically -->
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 id="product-name">Product Name</h1>
+                    <div class="product-price">
+                        <span id="product-price">$0.00</span>
+                    </div>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="reviews-count">(24 reviews)</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p id="product-description">Product description will be loaded here.</p>
+                    </div>
+                    
+                    <div class="product-meta">
+                        <p><strong>Artisan:</strong> <span id="product-artisan">Artisan Name</span></p>
+                        <p><strong>Materials:</strong> <span id="product-materials">Materials list</span></p>
+                        <p><strong>Dimensions:</strong> <span id="product-dimensions">Product dimensions</span></p>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="option-group" id="color-options">
+                            <label>Color:</label>
+                            <div class="color-selector">
+                                <!-- Color options will be added dynamically if applicable -->
+                            </div>
+                        </div>
+                        
+                        <div class="option-group" id="size-options">
+                            <label>Size:</label>
+                            <div class="size-selector">
+                                <!-- Size options will be added dynamically if applicable -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus-btn"><i class="fas fa-minus"></i></button>
+                            <input type="number" id="quantity" value="1" min="1" max="99">
+                            <button class="quantity-btn plus-btn"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button id="add-to-cart" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn btn-wishlist"><i class="far fa-heart"></i></button>
+                    </div>
+                    
+                    <div class="shipping-info">
+                        <p><i class="fas fa-truck"></i> Free shipping on orders over $75</p>
+                        <p><i class="fas fa-undo"></i> 30-day returns</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="details">Details</button>
+                    <button class="tab-btn" data-tab="artisan-story">Artisan Story</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+                </div>
+                
+                <div class="tab-content active" id="details">
+                    <div id="details-content">
+                        <!-- Product details will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="artisan-story">
+                    <div id="artisan-content">
+                        <!-- Artisan story will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <div class="reviews-summary">
+                        <div class="rating-summary">
+                            <div class="average-rating">4.7</div>
+                            <div class="rating-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <div class="total-reviews">Based on 24 reviews</div>
+                        </div>
+                        
+                        <div class="rating-bars">
+                            <div class="rating-bar">
+                                <span>5 Stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%;"></div>
+                                </div>
+                                <span>18</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 Stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 17%;"></div>
+                                </div>
+                                <span>4</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 Stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 8%;"></div>
+                                </div>
+                                <span>2</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 Stars</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 0%;"></div>
+                                </div>
+                                <span>0</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 Star</span>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 0%;"></div>
+                                </div>
+                                <span>0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reviews-list" id="reviews-container">
+                        <!-- Reviews will be loaded here -->
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="shipping">
+                    <h3>Shipping Information</h3>
+                    <p>We ship worldwide from our studio within 1-3 business days of receiving your order.</p>
+                    <ul>
+                        <li>Free standard shipping on orders over $75 (US)</li>
+                        <li>Standard shipping (5-7 business days): $5.95</li>
+                        <li>Express shipping (2-3 business days): $12.95</li>
+                        <li>International shipping (10-14 business days): $19.95</li>
+                    </ul>
+                    
+                    <h3>Returns & Exchanges</h3>
+                    <p>We want you to be completely satisfied with your purchase. If for any reason you're not happy with your order, we accept returns within 30 days of delivery.</p>
+                    <p>Please note: Custom or personalized items cannot be returned unless they arrive damaged or defective.</p>
+                    <a href="#" class="text-link">Read our full Return Policy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="related-products">
+        <div class="container">
+            <h2 class="section-title">You Might Also Like</h2>
+            <div class="product-grid" id="related-products">
+                <!-- Related products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <p>Subscribe to our newsletter for exclusive offers, artisan stories, and new product alerts</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ArtisanGems</h3>
+                    <p>Handcrafted with love, delivering unique pieces to cherish forever.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-etsy"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html?category=jewelry">Jewelry</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                        <li><a href="products.html?category=homegoods">Home Goods</a></li>
+                        <li><a href="products.html?category=gifts">Gift Ideas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#artisans">Our Artisans</a></li>
+                        <li><a href="about.html#values">Our Values</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ArtisanGems. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get product ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            
+            if (productId) {
+                loadProductDetails(productId);
+                loadRelatedProducts(productId);
+            } else {
+                // Redirect to products page if no ID is provided
+                window.location.href = 'products.html';
+            }
+            
+            // Tab functionality
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons and content
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(this.dataset.tab).classList.add('active');
+                });
+            });
+            
+            // Quantity controls
+            document.querySelector('.minus-btn').addEventListener('click', function() {
+                const input = document.getElementById('quantity');
+                const value = parseInt(input.value);
+                if (value > 1) {
+                    input.value = value - 1;
+                }
+            });
+            
+            document.querySelector('.plus-btn').addEventListener('click', function() {
+                const input = document.getElementById('quantity');
+                const value = parseInt(input.value);
+                if (value < 99) {
+                    input.value = value + 1;
+                }
+            });
+            
+            // Add to cart button
+            document.getElementById('add-to-cart').addEventListener('click', function() {
+                const quantity = parseInt(document.getElementById('quantity').value);
+                addToCart(productId, quantity);
+            });
+        });
+    </script>
+</body>
+</html>
