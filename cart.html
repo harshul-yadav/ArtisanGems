@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ArtisanGems</title>
+    <meta name="description" content="View and manage your shopping cart at ArtisanGems.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ArtisanGems</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon active">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Your Shopping Cart</h1>
+            <p>Review your items and proceed to checkout</p>
+        </div>
+    </section>
+
+    <section class="cart-section">
+        <div class="container">
+            <div id="cart-empty" class="cart-empty hidden">
+                <i class="fas fa-shopping-bag"></i>
+                <h2>Your cart is empty</h2>
+                <p>Looks like you haven't added any items to your cart yet.</p>
+                <a href="products.html" class="btn">Start Shopping</a>
+            </div>
+            
+            <div id="cart-content" class="cart-content">
+                <div class="cart-header">
+                    <div class="cart-row">
+                        <div class="product-col">Product</div>
+                        <div class="price-col">Price</div>
+                        <div class="quantity-col">Quantity</div>
+                        <div class="total-col">Total</div>
+                        <div class="remove-col"></div>
+                    </div>
+                </div>
+                
+                <div id="cart-items" class="cart-items">
+                    <!-- Cart items will be loaded dynamically -->
+                </div>
+                
+                <div class="cart-actions">
+                    <div class="coupon">
+                        <input type="text" placeholder="Coupon code">
+                        <button class="btn btn-outline">Apply Coupon</button>
+                    </div>
+                    <button id="update-cart" class="btn btn-outline">Update Cart</button>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Cart Totals</h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <div class="shipping-options">
+                            <div>
+                                <label>
+                                    <input type="radio" name="shipping" value="standard" checked>
+                                    Standard Shipping: <span id="standard-shipping-cost">$5.95</span>
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" name="shipping" value="express">
+                                    Express Shipping: <span>$12.95</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="free-shipping-notification" class="free-shipping-notification hidden">
+                        <i class="fas fa-truck"></i> 
+                        <span>Your order qualifies for free shipping!</span>
+                    </div>
+                    <div id="free-shipping-threshold" class="free-shipping-threshold">
+                        <div class="threshold-text">
+                            Add <span id="amount-for-free-shipping">$0.00</span> more to get free shipping!
+                        </div>
+                        <div class="threshold-bar">
+                            <div id="threshold-progress" class="threshold-progress"></div>
+                        </div>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <a href="checkout.html" id="checkout-btn" class="btn btn-primary checkout-btn">Proceed to Checkout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommended-products">
+        <div class="container">
+            <h2 class="section-title">You Might Like</h2>
+            <div class="product-grid" id="recommended-products">
+                <!-- Recommended products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ArtisanGems</h3>
+                    <p>Handcrafted with love, delivering unique pieces to cherish forever.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-etsy"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html?category=jewelry">Jewelry</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                        <li><a href="products.html?category=homegoods">Home Goods</a></li>
+                        <li><a href="products.html?category=gifts">Gift Ideas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#artisans">Our Artisans</a></li>
+                        <li><a href="about.html#values">Our Values</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ArtisanGems. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart items
+            loadCartItems();
+            
+            // Load recommended products
+            loadRecommendedProducts();
+            
+            // Update cart button
+            document.getElementById('update-cart').addEventListener('click', function() {
+                updateCart();
+            });
+            
+            // Shipping selection
+            document.querySelectorAll('input[name="shipping"]').forEach(input => {
+                input.addEventListener('change', function() {
+                    updateCartTotals();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
