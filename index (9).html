@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtisanGems - Handcrafted Jewelry & Goods</title>
+    <meta name="description" content="Discover unique handmade jewelry and artisan crafts at ArtisanGems.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>ArtisanGems</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Handcrafted with Love</h2>
+                <p>Unique jewelry and artisanal goods made with passion and dedication</p>
+                <a href="products.html" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Browse Categories</h2>
+            <div class="category-grid">
+                <a href="products.html?category=jewelry" class="category-card">
+                    <div class="category-img">
+                        <img src="/assets/images/category_jewelry.png" alt="Handmade Jewelry">
+                    </div>
+                    <h3>Jewelry</h3>
+                </a>
+                <a href="products.html?category=accessories" class="category-card">
+                    <div class="category-img">
+                        <img src="/assets/images/category_accessories.png" alt="Accessories">
+                    </div>
+                    <h3>Accessories</h3>
+                </a>
+                <a href="products.html?category=homegoods" class="category-card">
+                    <div class="category-img">
+                        <img src="/assets/images/category_homegoods.png" alt="Home Goods">
+                    </div>
+                    <h3>Home Goods</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid" id="featured-products">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Love</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"The craftsmanship is extraordinary! I've never received so many compliments on a piece of jewelry before."</p>
+                        <h4>- Sarah T.</h4>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"Unique pieces that stand out from mass-produced items. You can feel the love and care put into each product."</p>
+                        <h4>- Michael D.</h4>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        <p>"The attention to detail is amazing. These handcrafted items bring so much character to my home."</p>
+                        <h4>- Elena R.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="/assets/images/artisan_story.png" alt="Handcrafted leather journal">
+                </div>
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <p>At ArtisanGems, we believe in the beauty of handcrafted goods. Each piece in our collection is lovingly made by skilled artisans who pour their heart and soul into their craft.</p>
+                    <p>We work directly with artisans to bring you unique, sustainable, and ethically-made products that tell a story and connect you to traditions from around the world.</p>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Join Our Community</h2>
+            <p>Subscribe to our newsletter for exclusive offers, artisan stories, and new product alerts</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>ArtisanGems</h3>
+                    <p>Handcrafted with love, delivering unique pieces to cherish forever.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-etsy"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="products.html?category=jewelry">Jewelry</a></li>
+                        <li><a href="products.html?category=accessories">Accessories</a></li>
+                        <li><a href="products.html?category=homegoods">Home Goods</a></li>
+                        <li><a href="products.html?category=gifts">Gift Ideas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="about.html#artisans">Our Artisans</a></li>
+                        <li><a href="about.html#values">Our Values</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 ArtisanGems. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Initialize featured products on homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedProducts();
+        });
+    </script>
+</body>
+</html>
